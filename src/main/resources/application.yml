@@ -2,10 +2,18 @@
 spring:
   profiles:
     active: local
-#Batch 명이 없을 경우 배치명 지정
+  application:
+    name: springbatch-api
+  main:
+    allow-bean-definition-overriding: true
+  #Batch 명이 없을 경우 배치명 지정
   batch:
     job:
       names: ${job.name:batchStudy}
+logging:
+  config: classpath:logback-spring.xml
+  file:
+    name: ${spring.application.name}
 
 ---
 #local 환경 설정
@@ -15,10 +23,45 @@ spring:
       on-profile: local
 #MySql 데이터베이스 연결
   datasource:
-    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/test
-    username: root
-    password: test
-    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    primary:
+      driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+      jdbc-url: jdbc:log4jdbc:mysql://127.0.0.1:3306/test
+      username: root
+      password: test
+      pool-name: hikari-cp-primary
+    secondary:
+      driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+      jdbc-url: jdbc:log4jdbc:mysql://127.0.0.1:3306/test
+      username: root
+      password: test
+      pool-name: hikari-cp-primary
+
+  #Spring batch가 사용하는 Schema생성 방식 설정
+  #never:미생성, always:매번생성, embedded:테스트용 메모리 DB용
+  batch:
+    jdbc:
+      initialize-schema: never
+
+---
+#dev 환경 설정
+spring:
+  config:
+    activate:
+      on-profile: dev
+  #MySql 데이터베이스 연결
+  datasource:
+    primary:
+      driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+      jdbc-url: jdbc:log4jdbc:mysql://127.0.0.1:3306/test
+      username: root
+      password: test
+      pool-name: hikari-cp-primary
+    secondary:
+      driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+      jdbc-url: jdbc:log4jdbc:mysql://127.0.0.1:3306/test
+      username: root
+      password: test
+      pool-name: hikari-cp-secondary
   #Spring batch가 사용하는 Schema생성 방식 설정
   #never:미생성, always:매번생성, embedded:테스트용 메모리 DB용
   batch:

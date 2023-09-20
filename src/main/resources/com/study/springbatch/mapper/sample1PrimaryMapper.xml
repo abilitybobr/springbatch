@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.study.springbatch.sample.mapper.Sample1PrimaryMapper">
+    <insert id="savePrimarySample" parameterType="com.study.springbatch.sample.model.Member">
+        SELECT 1 FROM DUAL
+    </insert>
+</mapper>
+
+

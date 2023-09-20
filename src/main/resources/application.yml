@@ -67,3 +67,12 @@ spring:
   batch:
     jdbc:
       initialize-schema: never
+
+---
+#qa 환경 설정
+
+---
+#stg환경 설정
+
+---
+#prd 환경 설정

@@ -1,4 +1,4 @@
-package com.study.springbatch.sample.model;
+package com.study.springbatch.basis.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @ApiModel(description = "샘플 Primary DB 예제")
-public class SamplePrimary {
+public class StudyOnePrimary {
 
     @ApiModelProperty(notes = "샘플 상품번호")
     private String itemNo;

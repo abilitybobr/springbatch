@@ -7,7 +7,7 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 /**
- * SqlSessionFactoryBuilder
+ * mybatis xml 파일 위치 정의
  */
 public class SqlSessionFactoryBuilder {
     private static final String CONFIG_LOCATION_PATH = "classpath:/mybatis-config.xml";

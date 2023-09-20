@@ -17,10 +17,18 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.study.springbatch.core.db.annotation.PrimaryConnection;
 import com.study.springbatch.core.db.annotation.SecondaryConnection;
 
+/**
+ * DataBase 연결 클래스
+ */
 class MyBatisConfig {
+    //Mapper 파일이 있는 위치 지정
     public static final String BASE_PACKAGE = "com.study";
 }
 
+/**
+ * Primary DataBase 연결 클래스
+ * Mapper 클래스에서 AnotationClass명으로 지정: PrimaryConnection
+ */
 @Configuration
 @EnableTransactionManagement
 @MapperScan(basePackages = MyBatisConfig.BASE_PACKAGE, annotationClass = PrimaryConnection.class, sqlSessionFactoryRef = "primarySqlSessionFactory")
@@ -31,6 +39,10 @@ class PrimaryMyBatisConfig {
         return SqlSessionFactoryBuilder.build(primaryDataSource);
     }
 
+    /**
+     * DataSource 연결정보를 Application.yml에 정의한 값을 사용해서 연결
+     * @return
+     */
     @Primary
     @Bean(name = "primaryDataSource", destroyMethod = "")
     @ConfigurationProperties("spring.datasource.primary")
@@ -47,6 +59,10 @@ class PrimaryMyBatisConfig {
     }
 }
 
+/**
+ * Secondary DataBase 연결 클래스
+ * Mapper 클래스에서 AnotationClass명으로 지정: SecondaryConnection
+ */
 @Configuration
 @MapperScan(basePackages = MyBatisConfig.BASE_PACKAGE, annotationClass = SecondaryConnection.class, sqlSessionFactoryRef = "secondarySqlSessionFactory")
 class SecondaryMyBatisConfig {
@@ -55,6 +71,10 @@ class SecondaryMyBatisConfig {
         return SqlSessionFactoryBuilder.build(secondaryDataSource);
     }
 
+    /**
+     * DataSource 연결정보를 Application.yml에 정의한 값을 사용해서 연결
+     * @return
+     */
     @Bean(name = "secondaryDataSource", destroyMethod = "")
     @ConfigurationProperties("spring.datasource.secondary")
     public DataSource dataSource() {

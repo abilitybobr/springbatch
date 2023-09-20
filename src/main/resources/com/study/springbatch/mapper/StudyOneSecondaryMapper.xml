@@ -3,8 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.study.springbatch.sample.mapper.Sample1SecondaryMapper">
-    <select id="selectSecondarySample" resultType="com.study.springbatch.sample.model.Member" parameterType="int">
+<mapper namespace="com.study.springbatch.basis.mapper.StudyOneSecondaryMapper">
+    <select id="selectSecondaryStudyOne" resultType="com.study.springbatch.basis.model.Member" parameterType="int">
         SELECT 1 as id, 'Gil-Dong' as name, 20 as age FROM DUAL
     </select>
 </mapper>

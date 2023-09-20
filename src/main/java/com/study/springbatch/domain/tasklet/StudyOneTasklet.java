@@ -1,11 +1,11 @@
-package com.study.springbatch.basis.tasklet;
+package com.study.springbatch.domain.tasklet;
 
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
 
-import com.study.springbatch.basis.service.StudyBatchOneService;
+import com.study.springbatch.domain.service.StudyBatchOneService;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

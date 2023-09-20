@@ -1,4 +1,4 @@
-package com.study.springbatch.basis.model;
+package com.study.springbatch.domain.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

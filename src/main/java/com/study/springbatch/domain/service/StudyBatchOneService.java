@@ -1,11 +1,11 @@
-package com.study.springbatch.basis.service;
+package com.study.springbatch.domain.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.study.springbatch.basis.mapper.StudyOnePrimaryMapper;
-import com.study.springbatch.basis.mapper.StudyOneSecondaryMapper;
-import com.study.springbatch.basis.model.Member;
+import com.study.springbatch.domain.mapper.StudyOnePrimaryMapper;
+import com.study.springbatch.domain.mapper.StudyOneSecondaryMapper;
+import com.study.springbatch.domain.model.Member;
 
 import lombok.RequiredArgsConstructor;
 

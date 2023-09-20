@@ -1,7 +1,7 @@
-package com.study.springbatch.basis.mapper;
+package com.study.springbatch.domain.mapper;
 
 import com.study.springbatch.core.db.annotation.PrimaryConnection;
-import com.study.springbatch.basis.model.Member;
+import com.study.springbatch.domain.model.Member;
 
 @PrimaryConnection
 public interface StudyOnePrimaryMapper {

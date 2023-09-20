@@ -1,4 +1,4 @@
-package com.study.springbatch.basis.job;
+package com.study.springbatch.domain.job;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -9,8 +9,8 @@ import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.study.springbatch.basis.service.StudyBatchOneService;
-import com.study.springbatch.basis.tasklet.StudyOneTasklet;
+import com.study.springbatch.domain.service.StudyBatchOneService;
+import com.study.springbatch.domain.tasklet.StudyOneTasklet;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.study.springbatch.basis.model;
+package com.study.springbatch.domain.model;
 
 import lombok.Getter;
 import lombok.Setter;

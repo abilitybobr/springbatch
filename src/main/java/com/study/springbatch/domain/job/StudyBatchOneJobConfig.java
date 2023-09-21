@@ -42,4 +42,6 @@ public class StudyBatchOneJobConfig {
                 .tasklet(new StudyOneTasklet(studyBatchOneService))
                 .build();
     }
+
+    //첫번째 커밋 목록
 }

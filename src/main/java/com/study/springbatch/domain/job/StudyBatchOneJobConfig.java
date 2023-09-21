@@ -42,12 +42,4 @@ public class StudyBatchOneJobConfig {
                 .tasklet(new StudyOneTasklet(studyBatchOneService))
                 .build();
     }
-
-    public void revert1() {
-
-    }
-
-    public void revert2() {
-
-    }
 }

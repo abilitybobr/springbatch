@@ -47,7 +47,4 @@ public class StudyBatchOneJobConfig {
 
     }
 
-    public void revert2() {
-
-    }
 }

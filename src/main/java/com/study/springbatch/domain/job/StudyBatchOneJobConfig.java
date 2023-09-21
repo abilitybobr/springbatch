@@ -50,4 +50,9 @@ public class StudyBatchOneJobConfig {
     public void revert() {
 
     }
+
+
+    public void revert2() {
+        //두번째 작성
+    }
 }

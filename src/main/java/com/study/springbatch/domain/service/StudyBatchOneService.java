@@ -24,4 +24,9 @@ public class StudyBatchOneService {
     public Member getMember() {
         return studyOneSecondaryMapper.selectSecondaryStudyOne(0);
     }
+
+
+    public void revertService() {
+
+    }
 }

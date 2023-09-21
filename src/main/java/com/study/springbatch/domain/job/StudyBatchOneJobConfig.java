@@ -44,8 +44,4 @@ public class StudyBatchOneJobConfig {
     }
 
     //첫번째 커밋 목록
-
-    //두번째 커밋 목록
-
-    //세번쨰 커밋 목록
 }

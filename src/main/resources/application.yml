@@ -9,7 +9,7 @@ spring:
   #Batch 명이 없을 경우 배치명 지정
   batch:
     job:
-      names: ${job.name:batchStudy}
+      names: ${job.name:NONE}
 logging:
   config: classpath:logback-spring.xml
   file:
@@ -34,7 +34,7 @@ spring:
       jdbc-url: jdbc:log4jdbc:mysql://127.0.0.1:3306/test
       username: root
       password: test
-      pool-name: hikari-cp-primary
+      pool-name: hikari-cp-secondary
 
   #Spring batch가 사용하는 Schema생성 방식 설정
   #never:미생성, always:매번생성, embedded:테스트용 메모리 DB용
